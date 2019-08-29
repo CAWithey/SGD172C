@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.sgd172.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\cwithey0\\VR Test 1\\SGD172C\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "SGD172 [Testing]"
+        }
+      }
+    }
+  ]
+}
