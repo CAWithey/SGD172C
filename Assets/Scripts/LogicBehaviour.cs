@@ -6,6 +6,7 @@ public class LogicBehaviour : MonoBehaviour
 {
     public GameObject[] Spawnables;
     private GameObject[] Spawners;
+    private int SpawnablesArray;
 
     void Awake()
     {
@@ -15,12 +16,14 @@ public class LogicBehaviour : MonoBehaviour
     void Start()
     {
         //GameObject spawn1 = GameObject.Find("SpawnPoint (1)");
+        //print(SpawnablesArray);
+
         Spawners = GameObject.FindGameObjectsWithTag("Spawners");
 
         foreach (GameObject SpawnObject in Spawners)
         {
             SpawnObject.SetActive(!gameObject.activeSelf);
-            Instantiate(Spawnables[0], new Vector3(SpawnObject.transform.position.x, SpawnObject.transform.position.y, SpawnObject.transform.position.z), Quaternion.identity);
+            Instantiate(Spawnables[Random.Range(0, Spawnables.Length)], new Vector3(SpawnObject.transform.position.x, SpawnObject.transform.position.y, SpawnObject.transform.position.z), Quaternion.identity);
         }
         //Spawners.SetActive(!gameObject.activeSelf);
         //print(spawn1.transform.position.x);
