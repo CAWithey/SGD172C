@@ -23,7 +23,12 @@ public class LogicBehaviour : MonoBehaviour
         foreach (GameObject SpawnObject in Spawners)
         {
             SpawnObject.SetActive(!gameObject.activeSelf);
-            Instantiate(Spawnables[Random.Range(0, Spawnables.Length)], new Vector3(SpawnObject.transform.position.x, SpawnObject.transform.position.y, SpawnObject.transform.position.z), Quaternion.identity);
+
+            SpawnablesArray = Random.Range(0, Spawnables.Length);
+            if (SpawnablesArray >= 1)
+            {
+                Instantiate(Spawnables[Random.Range(0, Spawnables.Length)], new Vector3(SpawnObject.transform.position.x, SpawnObject.transform.position.y, SpawnObject.transform.position.z), Quaternion.identity);
+            }
         }
         //Spawners.SetActive(!gameObject.activeSelf);
         //print(spawn1.transform.position.x);
