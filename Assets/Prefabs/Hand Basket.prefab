@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4178701551429163849}
   - component: {fileID: 2714705293505882385}
   m_Layer: 0
-  m_Name: basket
+  m_Name: Hand Basket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2432345015010013077}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.93254, y: 0.007, z: -3.94}
   m_LocalScale: {x: 21.834929, y: 22.053265, z: 27.58383}
   m_Children: []
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 40507036236488f458caa8b7a90bbe12, type: 3}
+  - {fileID: 2100000, guid: 4678b263ce714814f9f13b8c9c01d226, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
