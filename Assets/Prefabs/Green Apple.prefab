@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 1340212495857614777}
   - component: {fileID: 8053107476283704719}
   - component: {fileID: 4395209763875797366}
-  - component: {fileID: 3103321179343511862}
   - component: {fileID: 1568598759739959443}
   - component: {fileID: 9181148021751717233}
   - component: {fileID: 5908669600976095918}
   - component: {fileID: 7342810617615605634}
+  - component: {fileID: 1906873613}
   m_Layer: 0
   m_Name: Green Apple
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2648747644275854762}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.158788, y: 1.1, z: 17.805902}
   m_LocalScale: {x: 5.5053, y: 5.5053, z: 5.5053}
   m_Children: []
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: -5254255415061380140, guid: 6cd734b0b2469d445a2a8735fa91b45c, type: 3}
-  - {fileID: -8568810957685443416, guid: 6cd734b0b2469d445a2a8735fa91b45c, type: 3}
+  - {fileID: 2100000, guid: 24e73955ba8338f41a24cd3aea0285a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,19 +83,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &3103321179343511862
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2648747644275854762}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.008309271
-  m_Center: {x: 0.0000000018626451, y: 0.00064529665, z: -4.656613e-10}
 --- !u!114 &1568598759739959443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,3 +200,17 @@ MonoBehaviour:
     m_TypeName: Valve.VR.InteractionSystem.HandEvent, SteamVR, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   interactable: {fileID: 0}
+--- !u!64 &1906873613
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2648747644275854762}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 7692320804657152604, guid: 6cd734b0b2469d445a2a8735fa91b45c, type: 3}

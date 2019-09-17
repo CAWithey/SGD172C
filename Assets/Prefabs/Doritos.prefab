@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 9216047462428964505}
   - component: {fileID: 5968065159462286937}
   - component: {fileID: 2469385472584367342}
+  - component: {fileID: 758169680}
   m_Layer: 0
   m_Name: Doritos
   m_TagString: Untagged
@@ -92,7 +93,7 @@ BoxCollider:
   m_GameObject: {fileID: 3875730505399382410}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.0072761388, y: 0.0305023, z: 0.014783727}
   m_Center: {x: 0, y: 0.0000000018626458, z: 0}
@@ -213,3 +214,17 @@ MonoBehaviour:
     m_TypeName: Valve.VR.InteractionSystem.HandEvent, SteamVR, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   interactable: {fileID: 0}
+--- !u!64 &758169680
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3875730505399382410}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4068373912626513877, guid: cee3aee176ab51a4ca47598dc73536f6, type: 3}

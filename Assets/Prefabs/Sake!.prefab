@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 4539234250429924254}
   - component: {fileID: 4874477265433835944}
   - component: {fileID: 1196011727740552529}
-  - component: {fileID: 1751010453092935654}
   - component: {fileID: 8736845151879467192}
   - component: {fileID: 8540941910975902070}
   - component: {fileID: 1143719461153920217}
   - component: {fileID: 441815650283919373}
+  - component: {fileID: 1970135052}
   m_Layer: 0
   m_Name: Sake!
   m_TagString: Untagged
@@ -84,19 +84,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1751010453092935654
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623115611253207437}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.09005986, y: 0.24892619, z: 0.04640897}
-  m_Center: {x: 0.0000000018626458, y: -0.005736634, z: -2.646978e-23}
 --- !u!114 &8736845151879467192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,3 +201,17 @@ MonoBehaviour:
     m_TypeName: Valve.VR.InteractionSystem.HandEvent, SteamVR, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   interactable: {fileID: 0}
+--- !u!64 &1970135052
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623115611253207437}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -5076798556035486163, guid: e84385e50d6758b46b72e9d36d2ca0c8, type: 3}

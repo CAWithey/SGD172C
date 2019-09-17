@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8436276393188792563}
   - component: {fileID: 429513859997300511}
   - component: {fileID: 6040589593455408359}
-  - component: {fileID: 5261205827020136201}
+  - component: {fileID: 2069738615}
   m_Layer: 0
   m_Name: polySurface2
   m_TagString: Untagged
@@ -78,8 +78,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5261205827020136201
-BoxCollider:
+--- !u!64 &2069738615
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88,9 +88,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.162464, y: 0.050416104, z: 0.050528366}
-  m_Center: {x: 0, y: 0.00005614292, z: 0}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -5597002278806442958, guid: b5c56dfdb0c27954e907be806ad9be52, type: 3}
 --- !u!1 &2637516267918461268
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +260,7 @@ GameObject:
   - component: {fileID: 377103994}
   - component: {fileID: 377103993}
   m_Layer: 0
-  m_Name: loaf of bread
+  m_Name: Loaf of Bread
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

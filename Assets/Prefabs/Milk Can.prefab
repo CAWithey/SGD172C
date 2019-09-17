@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4491192502188034372}
   - component: {fileID: 9001326396314286354}
   - component: {fileID: 3928341247916646640}
-  - component: {fileID: 8459433919830723084}
+  - component: {fileID: 1389468332}
   m_Layer: 0
   m_Name: Milk Can
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 449388201333678737}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.81729, y: 0.20811, z: 6.6906}
-  m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
+  m_LocalScale: {x: 4.2024503, y: 4.2024503, z: 4.2024503}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -200,8 +200,8 @@ MonoBehaviour:
     m_TypeName: Valve.VR.InteractionSystem.HandEvent, SteamVR, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   interactable: {fileID: 0}
---- !u!65 &8459433919830723084
-BoxCollider:
+--- !u!64 &1389468332
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -210,6 +210,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.019982943, y: 0.020420134, z: 0.019982945}
-  m_Center: {x: 9.313226e-10, y: -0.00005622534, z: -9.313226e-10}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 6099800089077584851, guid: 9ce939bc472d6f44ba24e2508cb75cbe, type: 3}
