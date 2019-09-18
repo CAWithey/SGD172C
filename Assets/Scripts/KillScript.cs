@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class KillScript : MonoBehaviour
 {
+    private int Score;
     void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
-        print("Bam!");
+        if (other.gameObject.tag == "Foods")
+        {
+            Destroy(other.gameObject);
+            Score = Score + 1;
+            print(Score);
+        }
     }
 }

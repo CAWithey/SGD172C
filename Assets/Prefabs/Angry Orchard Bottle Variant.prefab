@@ -144,6 +144,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 6449f56813d12844ab58b5923b045220,
         type: 3}
+      propertyPath: m_TagString
+      value: Foods
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 6449f56813d12844ab58b5923b045220,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -160,17 +165,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6449f56813d12844ab58b5923b045220,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.03959
+      value: 9.978463
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6449f56813d12844ab58b5923b045220,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0116208
+      value: 0.049974203
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6449f56813d12844ab58b5923b045220,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.714207
+      value: 14.3969
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6449f56813d12844ab58b5923b045220,
         type: 3}

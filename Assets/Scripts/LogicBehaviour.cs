@@ -25,7 +25,7 @@ public class LogicBehaviour : MonoBehaviour
             SpawnObject.SetActive(!gameObject.activeSelf);
 
             SpawnablesArray = Random.Range(0, Spawnables.Length);
-            if (SpawnablesArray >= 1)
+            if (SpawnablesArray >= 3)
             {
                 Instantiate(Spawnables[Random.Range(0, Spawnables.Length)], new Vector3(SpawnObject.transform.position.x, SpawnObject.transform.position.y, SpawnObject.transform.position.z), Quaternion.Euler(0f,90f,0f));
             }

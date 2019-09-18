@@ -18,8 +18,8 @@ GameObject:
   - component: {fileID: 660452090408746582}
   - component: {fileID: 660452090408746576}
   m_Layer: 0
-  m_Name: Watermelon2
-  m_TagString: Untagged
+  m_Name: Watermelon
+  m_TagString: Foods
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,13 +31,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8794273035320218261}
-  m_LocalRotation: {x: 0.6991082, y: -0, z: -0, w: 0.71501595}
+  m_LocalRotation: {x: 0.69910824, y: 0, z: 0, w: 0.71501595}
   m_LocalPosition: {x: 8.028038, y: 1.205, z: 16.864}
-  m_LocalScale: {x: 12.619585, y: 12.619585, z: 12.619585}
+  m_LocalScale: {x: 7.3328624, y: 7.3328624, z: 7.3328624}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 88.711006, y: 0, z: 0}
 --- !u!33 &3534155675470338736
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1081770056815144408}
   m_Layer: 0
   m_Name: Steak
-  m_TagString: Untagged
+  m_TagString: Foods
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,7 +65,7 @@ MeshRenderer:
   - {fileID: 5955844840416208063, guid: a8f8b418414ee3647b40e7e84933ef9d, type: 3}
   - {fileID: 1931110302239519103, guid: a8f8b418414ee3647b40e7e84933ef9d, type: 3}
   - {fileID: -7573661587976805087, guid: a8f8b418414ee3647b40e7e84933ef9d, type: 3}
-  - {fileID: -1294058508819152814, guid: a8f8b418414ee3647b40e7e84933ef9d, type: 3}
+  - {fileID: 2100000, guid: 63ff7079809c5784fad81327d33919bb, type: 2}
   - {fileID: -4125471728267972529, guid: a8f8b418414ee3647b40e7e84933ef9d, type: 3}
   - {fileID: 2216991656431249491, guid: a8f8b418414ee3647b40e7e84933ef9d, type: 3}
   - {fileID: -2416719745063247026, guid: a8f8b418414ee3647b40e7e84933ef9d, type: 3}

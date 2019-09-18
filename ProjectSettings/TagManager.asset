@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Spawners
+  - projectile
+  - FxTemporaire
+  - Foods
   layers:
   - Default
   - TransparentFX
