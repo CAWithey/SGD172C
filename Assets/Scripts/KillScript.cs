@@ -5,13 +5,28 @@ using UnityEngine;
 public class KillScript : MonoBehaviour
 {
     private int Score;
-    void OnTriggerEnter(Collider other)
+    private void Start()
     {
-        if (other.gameObject.tag == "Foods")
+        Score = 0;
+    }
+    
+    void OnCollisionEnter(Collision collision)
+    {
+        if (1 == 1) //other.gameObject.tag == "Foods"
         {
-            Destroy(other.gameObject);
-            Score = Score + 1;
+            //Score += 1;
+            //print(Score);
+            //Destroy(other.gameObject);
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Foods") 
+        {
+            
+            Score += 1;
             print(Score);
+            Destroy(other.gameObject);
         }
     }
 }

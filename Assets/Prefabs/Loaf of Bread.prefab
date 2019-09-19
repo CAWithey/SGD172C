@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2069738615}
   m_Layer: 0
   m_Name: polySurface2
-  m_TagString: Untagged
+  m_TagString: Foods
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 3327614629081080212}
   m_Layer: 0
   m_Name: pPlane1
-  m_TagString: Untagged
+  m_TagString: Foods
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 8351376247016132251}
   m_Layer: 0
   m_Name: pasted__group1
-  m_TagString: Untagged
+  m_TagString: Foods
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
