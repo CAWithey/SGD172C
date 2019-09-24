@@ -8,6 +8,9 @@ TagManager:
   - projectile
   - FxTemporaire
   - Foods
+  - ScoreScreen
+  - ItemScreen
+  - TimerScreen
   layers:
   - Default
   - TransparentFX

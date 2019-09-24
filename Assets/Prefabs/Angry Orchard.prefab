@@ -140,7 +140,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 6449f56813d12844ab58b5923b045220,
         type: 3}
       propertyPath: m_Name
-      value: Angry Orchard Bottle Variant
+      value: Angry Orchard
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 6449f56813d12844ab58b5923b045220,
         type: 3}
@@ -159,6 +159,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7455685359145607950, guid: 6449f56813d12844ab58b5923b045220,
         type: 3}
+      propertyPath: m_Name
+      value: Angry Orchard
+      objectReference: {fileID: 0}
+    - target: {fileID: -7455685359145607950, guid: 6449f56813d12844ab58b5923b045220,
+        type: 3}
       propertyPath: m_TagString
       value: Foods
       objectReference: {fileID: 0}
@@ -170,7 +175,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6449f56813d12844ab58b5923b045220,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.235656
+      value: 11.919737
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6449f56813d12844ab58b5923b045220,
         type: 3}
@@ -180,7 +185,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6449f56813d12844ab58b5923b045220,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.726312
+      value: 1.5178965
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6449f56813d12844ab58b5923b045220,
         type: 3}

@@ -4,28 +4,22 @@ using UnityEngine;
 
 public class KillScript : MonoBehaviour
 {
-    private int Score;
     private void Start()
     {
-        Score = 0;
+        Score.score = 0;
     }
-    
-    void OnCollisionEnter(Collision collision)
-    {
-        if (1 == 1) //other.gameObject.tag == "Foods"
-        {
-            //Score += 1;
-            //print(Score);
-            //Destroy(other.gameObject);
-        }
-    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Foods") 
         {
-            
-            Score += 1;
-            print(Score);
+            Score.itemName = other.name;
+            Score.itemName = Score.itemName.Replace("(Clone)", "");
+            if (Score.itemName == "Bananas" || Score.itemName == "Red Apple" || Score.itemName == "Corn" || Score.itemName == "Grapes" || Score.itemName == "Green Apple" || Score.itemName == "Lemon" || Score.itemName == "Orange" || Score.itemName == "Pear" || Score.itemName == "Red Apple" || Score.itemName == "Watermelon" || Score.itemName == "Yellow Apple")
+            {
+                Score.score += 3;
+            }
+            else { Score.score += 1; }
             Destroy(other.gameObject);
         }
     }
