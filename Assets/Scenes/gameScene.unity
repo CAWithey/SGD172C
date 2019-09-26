@@ -286,6 +286,7 @@ GameObject:
   - component: {fileID: 3470385}
   - component: {fileID: 3470384}
   - component: {fileID: 3470383}
+  - component: {fileID: 3470386}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -375,6 +376,21 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &3470386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3470381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d9d793f2ba069e4791bdb42107cc308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 1419953854}
+  itemText: {fileID: 1017152786}
+  timerText: {fileID: 1119199235}
 --- !u!1 &3609692
 GameObject:
   m_ObjectHideFlags: 0
@@ -35471,7 +35487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f7b8dd4d67e8f14aa9b3de210bcf36c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 9999
+  startTime: 30
   Spawnables:
   - {fileID: 7510631853508123620, guid: 01b098f5fee702640adb5239da62bd9e, type: 3}
   - {fileID: 623115611253207437, guid: d71c23159975e644aba9aa48310f0cce, type: 3}
@@ -35493,9 +35509,6 @@ MonoBehaviour:
   - {fileID: 7706448862933515089, guid: 739c842417885744b9c7f7d2268cf83d, type: 3}
   - {fileID: 2157869073622375748, guid: 029ce90ceed8b074482b72b4d5e52259, type: 3}
   - {fileID: 4586159759824695986, guid: 0a10dc7454cd81d47a45d59acc801cc9, type: 3}
-  scoreText: {fileID: 1419953854}
-  itemText: {fileID: 1017152786}
-  timerText: {fileID: 1119199235}
 --- !u!1 &850131913
 GameObject:
   m_ObjectHideFlags: 0

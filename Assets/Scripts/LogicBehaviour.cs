@@ -1,31 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class LogicBehaviour : MonoBehaviour
 {
-    private float time;
-    public float startTime;
+    public int startTime;
     public GameObject[] Spawnables;
     private GameObject[] Spawners;
     private int SpawnablesArray;
-    public Text scoreText;
-    public Text itemText;
-    public Text timerText;
 
     void Awake()
     {
-        
-    }
-
-    void Start()
-    {
-        time = startTime;
-        Score.score = 0;
+        //Score.time = startTime;
+        Score.time = 9000;
+        Score.score = 8000;
         Spawners = GameObject.FindGameObjectsWithTag("Spawners");
-        StartCountdownTimer();
 
         foreach (GameObject SpawnObject in Spawners)
         {
@@ -44,35 +34,5 @@ public class LogicBehaviour : MonoBehaviour
         //addCube = new GameObject("RedCube");
         //addCube.AddComponent<Rigidbody>();
         //addCube.AddComponent<BoxCollider>();
-    }
-
-    void StartCountdownTimer()
-    {
-        if (timerText != null)
-        {
-            timerText.text = "Time: ";
-        }
-    }
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        //foreach (Text scoreText in Text)
-        //{
-
-        //}
-        scoreText.text = "Score: " + Score.score;
-        itemText.text = Score.itemName;
-        if (timerText != null && time > 0f)
-        {
-            time -= Time.deltaTime;
-            string minutes = Mathf.Floor(time / 60).ToString("00");
-            string seconds = (time % 60).ToString("00");
-            string fraction = ((time * 100) % 100).ToString("000");
-            timerText.text = "Time Left: " + minutes + ":" + seconds + ":" + fraction;
-        }
-        if (time <= 0f)
-        {
-
-        }
     }
 }
