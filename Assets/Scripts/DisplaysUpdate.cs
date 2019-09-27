@@ -8,24 +8,31 @@ public class DisplaysUpdate : MonoBehaviour
     public Text scoreText;
     public Text itemText;
     public Text timerText;
-    //public int startTime;
+    private float minutes;
+    private float seconds;
+    private float fraction;
 
     void Start()
     {
-        
+        print(Score.score);
     }
 
     void FixedUpdate()
     {
         scoreText.text = "Score: " + Score.score;
         itemText.text = Score.itemName;
-        if (Score.time <= 0f)
+
+        if (Score.time > 0f)
         {
-            timerText.text = "Time Left: " + Score.minutes.ToString("00") + ":" + Score.seconds.ToString("00") + ":" + Score.fraction.ToString("000");
+            Score.time -= Time.deltaTime;
+            minutes = Mathf.Floor(Score.time / 60);
+            seconds = (Score.time % 60);
+            fraction = ((Score.time * 100) % 100);
+            timerText.text = "Time Left: " + minutes.ToString("00") + ":" + seconds.ToString("00") + ":" + fraction.ToString("000");
         }
         else
         {
-            timerText.text = "Time Left: " + Score.minutes.ToString("00") + ":" + Score. seconds.ToString("00") + ":" + Score.fraction.ToString("000");
+            timerText.text = "";
         }
     }
 }

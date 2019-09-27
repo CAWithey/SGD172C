@@ -12,8 +12,8 @@ public class LogicBehaviour : MonoBehaviour
 
     void Awake()
     {
-        //Score.time = startTime;
-        Score.time = 9000;
+        Score.time = startTime;
+        //Score.time = 9000;
         Score.score = 8000;
         Spawners = GameObject.FindGameObjectsWithTag("Spawners");
 
@@ -27,12 +27,5 @@ public class LogicBehaviour : MonoBehaviour
                 Instantiate(Spawnables[Random.Range(0, Spawnables.Length)], new Vector3(SpawnObject.transform.position.x, SpawnObject.transform.position.y, SpawnObject.transform.position.z), Quaternion.Euler(0f,90f,0f));
             }
         }
-        //Spawners.SetActive(!gameObject.activeSelf);
-        //print(spawn1.transform.position.x);
-        
-        //GameObject addCube;
-        //addCube = new GameObject("RedCube");
-        //addCube.AddComponent<Rigidbody>();
-        //addCube.AddComponent<BoxCollider>();
     }
 }
