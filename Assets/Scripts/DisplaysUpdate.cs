@@ -14,7 +14,7 @@ public class DisplaysUpdate : MonoBehaviour
 
     void Start()
     {
-        print(Score.score);
+        //print(Score.score);
     }
 
     void FixedUpdate()
@@ -33,6 +33,7 @@ public class DisplaysUpdate : MonoBehaviour
         else
         {
             timerText.text = "";
+            Score.itemName = "";
         }
     }
 }

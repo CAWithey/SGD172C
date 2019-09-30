@@ -11,6 +11,7 @@ TagManager:
   - ScoreScreen
   - ItemScreen
   - TimerScreen
+  - TeleportArea
   layers:
   - Default
   - TransparentFX

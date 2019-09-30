@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class KillScript : MonoBehaviour
 {
-    private void Start()
+    private void Awake()
     {
         Score.score = 0;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Foods") 
+        if (other.gameObject.tag == "Foods" && Score.time > 0) 
         {
             Score.itemName = other.name;
             Score.itemName = Score.itemName.Replace("(Clone)", "");
