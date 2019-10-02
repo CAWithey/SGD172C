@@ -8,17 +8,20 @@ public class HandBasketScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Foods")
         {
-            //other.transform.parent = this.transform.parent;
+            //other.transform.parent = this.transform.root;
+            other.transform.parent = this.transform;
             other.transform.localPosition = this.transform.localPosition;
-            other.transform.localRotation = this.transform.localRotation;
+            other.transform.localScale = other.transform.parent.parent.localScale;
+            other.transform.localRotation = other.transform.localRotation;
+            //var child[] = other.
+            //print(this.transform.parent);
         }
     }
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Foods")
         {
-            other.transform.localPosition = other.transform.localPosition;
-            other.transform.localRotation = other.transform.localRotation;
+            other.transform.parent = null;
         }
     }
 }

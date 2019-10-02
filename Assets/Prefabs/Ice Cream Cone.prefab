@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 450941418919018898}
   - component: {fileID: 4767809166200130743}
   m_Layer: 0
-  m_Name: cookiesnCream
+  m_Name: Ice Cream Cone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

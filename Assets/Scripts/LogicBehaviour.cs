@@ -6,23 +6,31 @@ using UnityEngine.SceneManagement;
 public class LogicBehaviour : MonoBehaviour
 {
     public int gameMode = 1;
+    //public GameObject Object;
     public int startTime;
     public GameObject[] Spawnables;
     private GameObject[] Spawners;
     private int SpawnablesArray;
+    private GameObject CartB1;
+    private GameObject CartB2;
 
     void Awake()
     {
         Score.time = startTime;
         Score.score = 8000;
         Spawners = GameObject.FindGameObjectsWithTag("Spawners");
+        CartB1 = GameObject.Find("ShoppingCartB (1)");
+        CartB2 = GameObject.Find("ShoppingCartB (2)");
+
+        foreach (GameObject SpawnObject in Spawners)
+        {
+            SpawnObject.SetActive(false);
+        }
 
         if (gameMode == 1)
         {
-            foreach (GameObject SpawnObject in Spawners)
-            {
-                SpawnObject.SetActive(!gameObject.activeSelf);
-            }
+            CartB1.SetActive(false);
+            CartB2.SetActive(false);
 
             foreach (GameObject SpawnObject in Spawners)
             {
@@ -35,16 +43,14 @@ public class LogicBehaviour : MonoBehaviour
         }
         else if (gameMode == 2)
         {
-            foreach (GameObject SpawnObject in Spawners)
-            {
-                Destroy(SpawnObject);
-            }
+            CartB1.SetActive(true);
+            CartB2.SetActive(true);
 
-            var rawr = GameObject.FindGameObjectsWithTag("TeleportArea");
+            var teleportAreas = GameObject.FindGameObjectsWithTag("TeleportArea");
 
-            for (int i = 0; i < rawr.Length; i++)
+            for (int i = 0; i < teleportAreas.Length; i++)
             {
-                rawr[i].SetActive(false);
+                teleportAreas[i].SetActive(false);
             }
         }
         else if (gameMode != 2 && gameMode != 1)
@@ -54,7 +60,7 @@ public class LogicBehaviour : MonoBehaviour
 
             foreach (GameObject SpawnObject in Spawners)
             {
-                Destroy(SpawnObject);
+                SpawnObject.SetActive(false);
             }
         }
     }
