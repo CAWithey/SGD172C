@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 3972889911777632815}
   - component: {fileID: 7214207192683437782}
   - component: {fileID: 1081770056815144409}
-  - component: {fileID: 1081770056815144419}
   - component: {fileID: 1081770056815144415}
   - component: {fileID: 1081770056815144414}
   - component: {fileID: 1081770056815144408}
+  - component: {fileID: 1237448692399309403}
+  - component: {fileID: 7860402839882886378}
   m_Layer: 0
   m_Name: Steak
   m_TagString: Foods
@@ -68,7 +69,7 @@ MeshRenderer:
   - {fileID: 2100000, guid: 63ff7079809c5784fad81327d33919bb, type: 2}
   - {fileID: -4125471728267972529, guid: a8f8b418414ee3647b40e7e84933ef9d, type: 3}
   - {fileID: 2216991656431249491, guid: a8f8b418414ee3647b40e7e84933ef9d, type: 3}
-  - {fileID: -2416719745063247026, guid: a8f8b418414ee3647b40e7e84933ef9d, type: 3}
+  - {fileID: 2100000, guid: f90c7a636cd0d4843868e65e4f2d4675, type: 2}
   - {fileID: 2310340700922821954, guid: a8f8b418414ee3647b40e7e84933ef9d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -105,19 +106,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1081770056815144419
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8944946232084982282}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.054059025, y: 0.0059051393, z: 0.03700734}
-  m_Center: {x: -0.00000047683716, y: 0, z: 0}
 --- !u!114 &1081770056815144415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffefbea063cab884ca33e5a449e5c22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachmentFlags: 44
+  attachmentFlags: 84
   attachmentOffset: {fileID: 0}
   catchingSpeedThreshold: -1
   releaseVelocityStyle: 1
@@ -219,3 +207,29 @@ MonoBehaviour:
   handFollowTransform: 1
   highlightOnHover: 1
   hideHighlight: []
+--- !u!114 &1237448692399309403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8944946232084982282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e05920a6da75a34bb6245f4917a0a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!64 &7860402839882886378
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8944946232084982282}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -5076798556035486163, guid: a8f8b418414ee3647b40e7e84933ef9d, type: 3}

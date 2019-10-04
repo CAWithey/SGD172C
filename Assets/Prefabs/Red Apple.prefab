@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6952352968406407194}
   - component: {fileID: 306736120190730139}
   - component: {fileID: 8518687217847471601}
+  - component: {fileID: 7736258064947597002}
   m_Layer: 0
   m_Name: Red Apple
   m_TagString: Foods
@@ -192,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffefbea063cab884ca33e5a449e5c22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachmentFlags: 44
+  attachmentFlags: 84
   attachmentOffset: {fileID: 0}
   catchingSpeedThreshold: -1
   releaseVelocityStyle: 1
@@ -215,3 +216,15 @@ MonoBehaviour:
     m_TypeName: Valve.VR.InteractionSystem.HandEvent, SteamVR, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   interactable: {fileID: 0}
+--- !u!114 &7736258064947597002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2157869073622375748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e05920a6da75a34bb6245f4917a0a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

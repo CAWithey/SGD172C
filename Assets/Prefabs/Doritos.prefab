@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5968065159462286937}
   - component: {fileID: 2469385472584367342}
   - component: {fileID: 758169680}
+  - component: {fileID: 7067124808371370340}
   m_Layer: 0
   m_Name: Doritos
   m_TagString: Foods
@@ -191,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffefbea063cab884ca33e5a449e5c22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachmentFlags: 44
+  attachmentFlags: 84
   attachmentOffset: {fileID: 0}
   catchingSpeedThreshold: -1
   releaseVelocityStyle: 1
@@ -228,3 +229,15 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4068373912626513877, guid: cee3aee176ab51a4ca47598dc73536f6, type: 3}
+--- !u!114 &7067124808371370340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3875730505399382410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e05920a6da75a34bb6245f4917a0a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

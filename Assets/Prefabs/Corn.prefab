@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8045128846367439028}
   - component: {fileID: 4966337647227359410}
   - component: {fileID: 6812632300907554950}
+  - component: {fileID: -7706109833161819675}
   m_Layer: 0
   m_Name: Corn
   m_TagString: Foods
@@ -192,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffefbea063cab884ca33e5a449e5c22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachmentFlags: 44
+  attachmentFlags: 84
   attachmentOffset: {fileID: 0}
   catchingSpeedThreshold: -1
   releaseVelocityStyle: 1
@@ -215,3 +216,15 @@ MonoBehaviour:
     m_TypeName: Valve.VR.InteractionSystem.HandEvent, SteamVR, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   interactable: {fileID: 0}
+--- !u!114 &-7706109833161819675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4441511125123263983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e05920a6da75a34bb6245f4917a0a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

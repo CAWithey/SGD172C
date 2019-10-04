@@ -16,8 +16,9 @@ GameObject:
   - component: {fileID: 4942246073527256306}
   - component: {fileID: 7559137423740556679}
   - component: {fileID: 2386871819509301571}
+  - component: {fileID: 4532667610578155372}
   m_Layer: 0
-  m_Name: One Piece Meat
+  m_Name: Meat Stick
   m_TagString: Foods
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 957933002035752605}
   m_LocalRotation: {x: -1, y: 0, z: 0, w: 0}
   m_LocalPosition: {x: 8.9800625, y: 1.072, z: 15.778357}
-  m_LocalScale: {x: 8.632592, y: 8.632592, z: 8.632592}
+  m_LocalScale: {x: 10.172799, y: 9.380175, z: 9.380175}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -176,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffefbea063cab884ca33e5a449e5c22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachmentFlags: 44
+  attachmentFlags: 84
   attachmentOffset: {fileID: 0}
   catchingSpeedThreshold: -1
   releaseVelocityStyle: 1
@@ -213,3 +214,15 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4068373912626513877, guid: 190dd231599c25b4c93a0ad4673715fe, type: 3}
+--- !u!114 &4532667610578155372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957933002035752605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e05920a6da75a34bb6245f4917a0a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

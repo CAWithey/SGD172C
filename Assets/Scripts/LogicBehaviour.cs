@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class LogicBehaviour : MonoBehaviour
 {
     public int gameMode = 1;
-    //public GameObject Object;
     public int startTime;
     public GameObject[] Spawnables;
     private GameObject[] Spawners;
@@ -35,7 +34,7 @@ public class LogicBehaviour : MonoBehaviour
             foreach (GameObject SpawnObject in Spawners)
             {
                 SpawnablesArray = Random.Range(0, Spawnables.Length);
-                if (Random.Range(0, 10) >= 7)
+                if (Random.Range(0, 10) >= 8) //7
                 {
                     Instantiate(Spawnables[Random.Range(0, Spawnables.Length)], new Vector3(SpawnObject.transform.position.x, SpawnObject.transform.position.y, SpawnObject.transform.position.z), Quaternion.Euler(0f, 90f, 0f));
                 }
@@ -62,6 +61,20 @@ public class LogicBehaviour : MonoBehaviour
             {
                 SpawnObject.SetActive(false);
             }
+        }
+    }
+    void FixedUpdate()
+    {
+        if (Score.time > 0f)
+        {
+            Score.time -= Time.deltaTime;
+            Score.minutes = Mathf.Floor(Score.time / 60);
+            Score.seconds = (Score.time % 60);
+            Score.fraction = ((Score.time * 100) % 100);
+        }
+        else
+        {
+            //PlayerPrefs.Save() HighScore = Score.score;
         }
     }
 }

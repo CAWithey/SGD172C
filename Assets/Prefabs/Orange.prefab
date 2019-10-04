@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8574710046661198779}
   - component: {fileID: 4891767273539796806}
   - component: {fileID: 7647344572585148091}
+  - component: {fileID: -1675841702832093319}
   m_Layer: 0
   m_Name: Orange
   m_TagString: Foods
@@ -32,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 7706448862933515089}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.17271, y: 1.1096, z: 16.118309}
-  m_LocalScale: {x: 3.8229222, y: 3.8229222, z: 3.8229222}
+  m_LocalScale: {x: 4.55463, y: 4.55463, z: 4.55463}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -179,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffefbea063cab884ca33e5a449e5c22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachmentFlags: 44
+  attachmentFlags: 84
   attachmentOffset: {fileID: 0}
   catchingSpeedThreshold: -1
   releaseVelocityStyle: 1
@@ -215,3 +216,15 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.009809171
   m_Center: {x: 0, y: 0.000042281117, z: 4.6566134e-10}
+--- !u!114 &-1675841702832093319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706448862933515089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e05920a6da75a34bb6245f4917a0a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

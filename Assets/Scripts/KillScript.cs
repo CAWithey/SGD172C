@@ -19,6 +19,14 @@ public class KillScript : MonoBehaviour
             {
                 Score.score += 3;
             }
+            else if (Score.itemName == "Fish")
+            {
+                Score.score += 2;
+            }
+            else if (Score.itemName == "Lotion" || Score.itemName == "Sake" || Score.itemName == "Angry Orchard")
+            {
+                Score.score -= 0;
+            }
             else { Score.score += 1; }
             Destroy(other.gameObject);
         }
