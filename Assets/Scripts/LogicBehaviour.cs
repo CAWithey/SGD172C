@@ -44,6 +44,12 @@ public class LogicBehaviour : MonoBehaviour
             var gameMode2KillArea = GameObject.FindGameObjectWithTag("GameMode2KillArea");
             gameMode2KillArea.transform.localPosition = new Vector3(gameMode2KillArea.transform.localPosition.x, y:-10f, gameMode2KillArea.transform.localPosition.z);
 
+            var gameMode2Text = GameObject.FindGameObjectsWithTag("GameMode2Text");
+            for (int i = 0; i < gameMode2Text.Length; i++)
+            {
+                gameMode2Text[i].SetActive(false);
+            }
+
             var teleportAreas = GameObject.FindGameObjectsWithTag("TeleportArea");
 
             for (int i = 0; i < teleportAreas.Length; i++)
@@ -56,7 +62,7 @@ public class LogicBehaviour : MonoBehaviour
                 SpawnablesArray = Random.Range(0, Spawnables.Length);
                 if (Random.Range(0, 10) >= 8) //8
                 {
-                    Instantiate(Spawnables[Random.Range(0, Spawnables.Length)], new Vector3(SpawnObject.transform.position.x, SpawnObject.transform.position.y, SpawnObject.transform.position.z), Quaternion.Euler(0f, 90f, 0f));
+                    Instantiate(Spawnables[Random.Range(0, Spawnables.Length)], new Vector3(SpawnObject.transform.position.x, SpawnObject.transform.position.y, SpawnObject.transform.position.z), Quaternion.Euler(Random.Range(0,259), Random.Range(0, 259), Random.Range(0, 259)));
                 }
             }
         }
@@ -67,6 +73,12 @@ public class LogicBehaviour : MonoBehaviour
 
             var gameMode2KillArea = GameObject.FindGameObjectWithTag("GameMode2KillArea");
             gameMode2KillArea.transform.localPosition = new Vector3(gameMode2KillArea.transform.localPosition.x, y:-1.6f, gameMode2KillArea.transform.localPosition.z);
+
+            var gameMode2Text = GameObject.FindGameObjectsWithTag("GameMode2Text");
+            for (int i = 0; i < gameMode2Text.Length; i++)
+            {
+                gameMode2Text[i].SetActive(true);
+            }
 
             var teleportAreas = GameObject.FindGameObjectsWithTag("TeleportArea");
 
@@ -100,12 +112,12 @@ public class LogicBehaviour : MonoBehaviour
 
                     var spawnedObject = Instantiate(Spawnables[Random.Range(0, Spawnables.Length)], new Vector3(SpawnObject2.transform.position.x, SpawnObject2.transform.position.y, SpawnObject2.transform.position.z), Quaternion.Euler(0f, 90f, 0f));
                     var tempAngle = SpawnObject2.transform.localRotation;
+                    var tempScale = spawnedObject.transform.localScale.x;
                     spawnedObject.transform.localRotation = tempAngle;
-                    spawnedObject.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 560f);
-                    
-                    
-                    //spawnedObject.AddRelativeForce();
-                    //print(SpawnObject);
+                    //tempScale = Mathf.Clamp(10 / (tempScale + 1f), 1f, 2f);
+                    //spawnedObject.transform.localScale = transform.localScale * tempScale;
+                    //print(spawnedObject.transform.localScale + " : " + spawnedObject.transform.localScale * tempScale);
+                    spawnedObject.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 540f); //560f
                 }
             }
         }
