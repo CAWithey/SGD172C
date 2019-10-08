@@ -12,6 +12,8 @@ TagManager:
   - ItemScreen
   - TimerScreen
   - TeleportArea
+  - Spawners2
+  - GameMode2KillArea
   layers:
   - Default
   - TransparentFX

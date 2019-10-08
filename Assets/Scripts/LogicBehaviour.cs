@@ -9,7 +9,9 @@ public class LogicBehaviour : MonoBehaviour
     public int startTime;
     public GameObject[] Spawnables;
     private GameObject[] Spawners;
+    private GameObject[] Spawners2;
     private int SpawnablesArray;
+    private float gameMode2Timer;
     private GameObject CartB1;
     private GameObject CartB2;
 
@@ -17,33 +19,54 @@ public class LogicBehaviour : MonoBehaviour
     {
         Score.time = startTime;
         Score.score = 8000;
+        Score.gameMode = gameMode;
+        Score.highScore = PlayerPrefs.GetInt("HighScore");
+        gameMode2Timer = 0;
         Spawners = GameObject.FindGameObjectsWithTag("Spawners");
+        Spawners2 = GameObject.FindGameObjectsWithTag("Spawners2");
         CartB1 = GameObject.Find("ShoppingCartB (1)");
         CartB2 = GameObject.Find("ShoppingCartB (2)");
-
+        
         foreach (GameObject SpawnObject in Spawners)
         {
             SpawnObject.SetActive(false);
         }
+        foreach (GameObject SpawnObject2 in Spawners2)
+        {
+            SpawnObject2.SetActive(false);
+        }
 
-        if (gameMode == 1)
+        if (Score.gameMode == 1)
         {
             CartB1.SetActive(false);
             CartB2.SetActive(false);
 
+            var gameMode2KillArea = GameObject.FindGameObjectWithTag("GameMode2KillArea");
+            gameMode2KillArea.transform.localPosition = new Vector3(gameMode2KillArea.transform.localPosition.x, y:-10f, gameMode2KillArea.transform.localPosition.z);
+
+            var teleportAreas = GameObject.FindGameObjectsWithTag("TeleportArea");
+
+            for (int i = 0; i < teleportAreas.Length; i++)
+            {
+                teleportAreas[i].SetActive(true);
+            }
+
             foreach (GameObject SpawnObject in Spawners)
             {
                 SpawnablesArray = Random.Range(0, Spawnables.Length);
-                if (Random.Range(0, 10) >= 8) //7
+                if (Random.Range(0, 10) >= 8) //8
                 {
                     Instantiate(Spawnables[Random.Range(0, Spawnables.Length)], new Vector3(SpawnObject.transform.position.x, SpawnObject.transform.position.y, SpawnObject.transform.position.z), Quaternion.Euler(0f, 90f, 0f));
                 }
             }
         }
-        else if (gameMode == 2)
+        else if (Score.gameMode == 2)
         {
             CartB1.SetActive(true);
             CartB2.SetActive(true);
+
+            var gameMode2KillArea = GameObject.FindGameObjectWithTag("GameMode2KillArea");
+            gameMode2KillArea.transform.localPosition = new Vector3(gameMode2KillArea.transform.localPosition.x, y:-1.6f, gameMode2KillArea.transform.localPosition.z);
 
             var teleportAreas = GameObject.FindGameObjectsWithTag("TeleportArea");
 
@@ -54,13 +77,7 @@ public class LogicBehaviour : MonoBehaviour
         }
         else if (gameMode != 2 && gameMode != 1)
         {
-            print("Error!");
             Score.time = 0;
-
-            foreach (GameObject SpawnObject in Spawners)
-            {
-                SpawnObject.SetActive(false);
-            }
         }
     }
     void FixedUpdate()
@@ -71,10 +88,43 @@ public class LogicBehaviour : MonoBehaviour
             Score.minutes = Mathf.Floor(Score.time / 60);
             Score.seconds = (Score.time % 60);
             Score.fraction = ((Score.time * 100) % 100);
+
+            if (Score.gameMode == 2)
+            {
+                gameMode2Timer -= Time.deltaTime;
+                if (gameMode2Timer <= 0)
+                {
+                    gameMode2Timer = Random.Range(.75f, 2f);
+
+                    var SpawnObject2 = Spawners2[Random.Range(0, Spawners2.Length)];
+
+                    var spawnedObject = Instantiate(Spawnables[Random.Range(0, Spawnables.Length)], new Vector3(SpawnObject2.transform.position.x, SpawnObject2.transform.position.y, SpawnObject2.transform.position.z), Quaternion.Euler(0f, 90f, 0f));
+                    var tempAngle = SpawnObject2.transform.localRotation;
+                    spawnedObject.transform.localRotation = tempAngle;
+                    spawnedObject.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 560f);
+                    
+                    
+                    //spawnedObject.AddRelativeForce();
+                    //print(SpawnObject);
+                }
+            }
         }
         else
         {
-            //PlayerPrefs.Save() HighScore = Score.score;
+            if (Score.score > Score.highScore)
+            {
+                PlayerPrefs.SetInt("HighScore", Score.score);
+            }
+            var Foods = GameObject.FindGameObjectsWithTag("Foods");
+
+            for (int i = 0; i < Foods.Length; i++)
+            {
+                Destroy(Foods[i].gameObject);
+            }
         }
+    }
+    void OnApplicationQuit()
+    {
+        PlayerPrefs.Save();
     }
 }

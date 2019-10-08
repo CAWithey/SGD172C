@@ -8,13 +8,12 @@ public class HandBasketScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Foods")
         {
-            print(other.transform.parent);
             if (other.transform.parent == null)
             {
                 other.transform.parent = this.transform.parent;
             }
-            print(other.transform.parent);
             other.transform.localScale = other.transform.localScale;
+            //print(other.transform.parent);
             //other.transform.parent = this.transform;
             //ChangeParentScale(this.transform, transform.localScale);
             //other.transform.localScale = this.transform.parent.parent.localScale;
@@ -38,17 +37,5 @@ public class HandBasketScript : MonoBehaviour
             other.transform.localRotation = other.transform.localRotation;
             other.transform.parent = null;
         }
-    }
-
-    void ChangeParentScale(Transform parent, Vector3 scale)
-    {
-        List<Transform> children = new List<Transform>();
-        foreach (Transform child in parent)
-        {
-            child.parent = null;
-            children.Add(child);
-        }
-        parent.localScale = scale;
-        foreach (Transform child in children) child.parent = parent;
     }
 }

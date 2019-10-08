@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7583773669675535387}
   - component: {fileID: -1905751619882313081}
   m_Layer: 0
-  m_Name: swirlIcecream
+  m_Name: Ice Cream Swirl
   m_TagString: Foods
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attachmentFlags: 84
   attachmentOffset: {fileID: 0}
-  catchingSpeedThreshold: -1
+  catchingSpeedThreshold: 1
   releaseVelocityStyle: 1
   releaseVelocityTimeOffset: -0.011
   scaleReleaseVelocity: 1.1

@@ -11,5 +11,5 @@ public class Score : MonoBehaviour
     public static float minutes;
     public static float seconds;
     public static float fraction;
-    //public static GameObject Object1x1x1;
+    public static int gameMode;
 }
