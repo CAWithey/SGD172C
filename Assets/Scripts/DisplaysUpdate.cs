@@ -26,7 +26,9 @@ public class DisplaysUpdate : MonoBehaviour
         else
         {
             timerText.text = "";
-            Score.itemName = "";
+            if (Score.gameMode == 1 || Score.gameMode == 2) { Score.itemName = ""; }
+            if (Score.gameMode == 1) { itemText.text = "High: " + Score.highScore; }
+            if (Score.gameMode == 2) { itemText.text = "High: " + Score.highScore2; }
         }
     }
 }

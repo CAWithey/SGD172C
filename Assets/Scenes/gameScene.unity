@@ -37960,6 +37960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameMode: 1
   startTime: 120
+  cake: {fileID: 4735098620823299501, guid: 63cf37f9f9e76664bb2f29bd1ec57c23, type: 3}
   Spawnables:
   - {fileID: 8246372806769551644, guid: 92ac4ab5e956aa947a2d2a6ceaefd9c1, type: 3}
   - {fileID: 6209046715405269957, guid: 977d1570017ee4b4e8ad04fa53846de6, type: 3}

@@ -6,6 +6,7 @@ public class Score : MonoBehaviour
 {
     public static int score;
     public static int highScore;
+    public static int highScore2;
     public static string itemName;
     public static float time;
     public static float minutes;

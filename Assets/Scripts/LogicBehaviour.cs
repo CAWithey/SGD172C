@@ -7,6 +7,8 @@ public class LogicBehaviour : MonoBehaviour
 {
     public int gameMode = 1;
     public int startTime;
+    private int startTime2;
+    public GameObject cake;
     public GameObject[] Spawnables;
     private GameObject[] Spawners;
     private GameObject[] Spawners2;
@@ -14,19 +16,23 @@ public class LogicBehaviour : MonoBehaviour
     private float gameMode2Timer;
     private GameObject CartB1;
     private GameObject CartB2;
+    private GameObject[] teleportAreas;
 
     void Awake()
     {
-        Score.time = startTime;
+        Score.time = startTime + 5;
+        startTime2 = startTime;
         Score.score = 8000;
         Score.gameMode = gameMode;
         Score.highScore = PlayerPrefs.GetInt("HighScore");
+        Score.highScore2 = PlayerPrefs.GetInt("HighScore2");
         gameMode2Timer = 0;
         Spawners = GameObject.FindGameObjectsWithTag("Spawners");
         Spawners2 = GameObject.FindGameObjectsWithTag("Spawners2");
         CartB1 = GameObject.Find("ShoppingCartB (1)");
         CartB2 = GameObject.Find("ShoppingCartB (2)");
-        
+        teleportAreas = GameObject.FindGameObjectsWithTag("TeleportArea");
+
         foreach (GameObject SpawnObject in Spawners)
         {
             SpawnObject.SetActive(false);
@@ -34,6 +40,11 @@ public class LogicBehaviour : MonoBehaviour
         foreach (GameObject SpawnObject2 in Spawners2)
         {
             SpawnObject2.SetActive(false);
+        }
+
+        for (int i = 0; i < teleportAreas.Length; i++)
+        {
+            teleportAreas[i].SetActive(false);
         }
 
         if (Score.gameMode == 1)
@@ -48,13 +59,6 @@ public class LogicBehaviour : MonoBehaviour
             for (int i = 0; i < gameMode2Text.Length; i++)
             {
                 gameMode2Text[i].SetActive(false);
-            }
-
-            var teleportAreas = GameObject.FindGameObjectsWithTag("TeleportArea");
-
-            for (int i = 0; i < teleportAreas.Length; i++)
-            {
-                teleportAreas[i].SetActive(true);
             }
 
             foreach (GameObject SpawnObject in Spawners)
@@ -80,16 +84,26 @@ public class LogicBehaviour : MonoBehaviour
                 gameMode2Text[i].SetActive(true);
             }
 
-            var teleportAreas = GameObject.FindGameObjectsWithTag("TeleportArea");
-
             for (int i = 0; i < teleportAreas.Length; i++)
             {
-                teleportAreas[i].SetActive(false);
+                teleportAreas[i].SetActive(true);
             }
         }
         else if (gameMode != 2 && gameMode != 1)
         {
             Score.time = 0;
+            var cakeObject = Instantiate(cake, new Vector3(6.642f, 1.79f, 13.262f), Quaternion.Euler(0, 0, 0));
+            cakeObject.transform.localScale += new Vector3(1.63f, 1.63f, 1.63f);
+            Score.itemName = "Cake!!!!!!!!!!!!!!!!!";
+
+            var gameMode2KillArea = GameObject.FindGameObjectWithTag("GameMode2KillArea");
+            gameMode2KillArea.transform.localPosition = new Vector3(gameMode2KillArea.transform.localPosition.x, y: -10f, gameMode2KillArea.transform.localPosition.z);
+
+            var gameMode2Text = GameObject.FindGameObjectsWithTag("GameMode2Text");
+            for (int i = 0; i < gameMode2Text.Length; i++)
+            {
+                gameMode2Text[i].SetActive(false);
+            }
         }
     }
     void FixedUpdate()
@@ -101,10 +115,21 @@ public class LogicBehaviour : MonoBehaviour
             Score.seconds = (Score.time % 60);
             Score.fraction = ((Score.time * 100) % 100);
 
+            if (Score.gameMode == 1)
+            {
+                if (Score.time < startTime2 && teleportAreas[1].activeSelf == false)
+                {
+                    for (int i = 0; i < teleportAreas.Length; i++)
+                    {
+                        teleportAreas[i].SetActive(true);
+                    }
+                }
+            }
+
             if (Score.gameMode == 2)
             {
                 gameMode2Timer -= Time.deltaTime;
-                if (gameMode2Timer <= 0)
+                if (gameMode2Timer <= 0 && Score.time < startTime2)
                 {
                     gameMode2Timer = Random.Range(.75f, 2f);
 
@@ -123,12 +148,17 @@ public class LogicBehaviour : MonoBehaviour
         }
         else
         {
-            if (Score.score > Score.highScore)
+            if (Score.gameMode == 1 && Score.score > Score.highScore)
             {
                 PlayerPrefs.SetInt("HighScore", Score.score);
             }
-            var Foods = GameObject.FindGameObjectsWithTag("Foods");
 
+            if (Score.gameMode == 2 && Score.score > Score.highScore2)
+            {
+                PlayerPrefs.SetInt("HighScore2", Score.score);
+            }
+
+            var Foods = GameObject.FindGameObjectsWithTag("Foods");
             for (int i = 0; i < Foods.Length; i++)
             {
                 Destroy(Foods[i].gameObject);
