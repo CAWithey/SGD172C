@@ -17,7 +17,7 @@ public class KillScript : MonoBehaviour
             Score.itemName = Score.itemName.Replace("(Clone)", "");
             if (Score.gameMode == 1)
             {
-                if (Score.itemName == "Bananas" || Score.itemName == "Red Apple" || Score.itemName == "Corn" || Score.itemName == "Grapes" || Score.itemName == "Green Apple" || Score.itemName == "Lemon" || Score.itemName == "Orange" || Score.itemName == "Pear" || Score.itemName == "Red Apple" || Score.itemName == "Watermelon" || Score.itemName == "Yellow Apple" || Score.itemName == "Broccoli")
+                if (Score.itemName == "Bananas" || Score.itemName == "Red Apple" || Score.itemName == "Corn" || Score.itemName == "Grapes" || Score.itemName == "Green Apple" || Score.itemName == "Lemon" || Score.itemName == "Orange" || Score.itemName == "Pear" || Score.itemName == "Red Apple" || Score.itemName == "Watermelon" || Score.itemName == "Yellow Apple" || Score.itemName == "Broccoli" || Score.itemName == "Jack O Lantern" || Score.itemName == "Asparagus" || Score.itemName == "Eggplant")
                 {
                     Score.score += 3;
                 }
@@ -34,12 +34,12 @@ public class KillScript : MonoBehaviour
             if (Score.gameMode == 2)
             {
                 if (name == "gameMode2KillAreaRight")
-                    if (Score.itemName == "Bananas" || Score.itemName == "Red Apple" || Score.itemName == "Corn" || Score.itemName == "Grapes" || Score.itemName == "Green Apple" || Score.itemName == "Lemon" || Score.itemName == "Orange" || Score.itemName == "Pear" || Score.itemName == "Red Apple" || Score.itemName == "Watermelon" || Score.itemName == "Yellow Apple" || Score.itemName == "Broccoli")
+                    if (Score.itemName == "Bananas" || Score.itemName == "Red Apple" || Score.itemName == "Corn" || Score.itemName == "Grapes" || Score.itemName == "Green Apple" || Score.itemName == "Lemon" || Score.itemName == "Orange" || Score.itemName == "Pear" || Score.itemName == "Red Apple" || Score.itemName == "Watermelon" || Score.itemName == "Yellow Apple" || Score.itemName == "Broccoli" || Score.itemName == "Jack O Lantern" || Score.itemName == "Asparagus" || Score.itemName == "Eggplant")
                     {
                         Score.score += 1;
                     }
                 if (name == "gameMode2KillAreaLeft")
-                    if (Score.itemName != "Bananas" && Score.itemName != "Red Apple" && Score.itemName != "Corn" && Score.itemName != "Grapes" && Score.itemName != "Green Apple" && Score.itemName != "Lemon" && Score.itemName != "Orange" && Score.itemName != "Pear" && Score.itemName != "Red Apple" && Score.itemName != "Watermelon" && Score.itemName != "Yellow Apple" && Score.itemName != "Broccoli")
+                    if (Score.itemName != "Bananas" && Score.itemName != "Red Apple" && Score.itemName != "Corn" && Score.itemName != "Grapes" && Score.itemName != "Green Apple" && Score.itemName != "Lemon" && Score.itemName != "Orange" && Score.itemName != "Pear" && Score.itemName != "Red Apple" && Score.itemName != "Watermelon" && Score.itemName != "Yellow Apple" && Score.itemName != "Broccoli" && Score.itemName != "Jack O Lantern" && Score.itemName != "Asparagus" && Score.itemName != "Eggplant")
                     {
                         Score.score += 1;
                     }

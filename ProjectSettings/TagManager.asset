@@ -15,6 +15,7 @@ TagManager:
   - Spawners2
   - GameMode2KillArea
   - GameMode2Text
+  - NPC
   layers:
   - Default
   - TransparentFX

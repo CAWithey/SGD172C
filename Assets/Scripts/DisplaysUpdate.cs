@@ -9,11 +9,6 @@ public class DisplaysUpdate : MonoBehaviour
     public Text itemText;
     public Text timerText;
 
-    void Start()
-    {
-        //print(Score.score);
-    }
-
     void FixedUpdate()
     {
         scoreText.text = "Score: " + Score.score;
